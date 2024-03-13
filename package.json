@@ -1,0 +1,17 @@
+{
+  
+  "type": "module",
+  "name": "qr-generator",
+  "version": "1.0.0",
+  "description": "generator for qr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omar DAYYA",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.16",
+    "qr-image": "^3.2.0"
+  }
+}
