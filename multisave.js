@@ -1,11 +1,7 @@
 import inquirer from "inquirer";
-import { type } from "os";
 import qr from "qr-image";
 import fs from "fs";
-
-import { randomInt } from "crypto";
-
-const number = randomInt(0, 10);
+import { URL } from "url";
 
 inquirer
   .prompt([
@@ -27,19 +23,19 @@ inquirer
     // console.log(url.hostname); // "www.example.com"
     // console.log(url.pathname); // "/cats"
 
-    console.log(answers.url); //TEST
-
     const website = answers.url;
+    const sliceURL = new URL("../", website);
+
+    console.log(answers.url); //TEST
+    console.log("This is hostname: " + sliceURL.hostname);
+    console.log("This is origin: " + sliceURL.origin);
+    console.log("This is pathname: " + sliceURL.pathname);
 
     var QRimage = qr.image(website);
 
-    const number = randomInt(0, 10);
-
-    QRimage.pipe(fs.createWriteStream(website + ".png"), {
+    QRimage.pipe(fs.createWriteStream(sliceURL.hostname + ".png"), {
       flags: "a", //appending flags
     });
-
-    console.log(number);
 
     fs.writeFile("message.txt", website + "\n", { flag: "a" }, (err) => {
       if (err) throw err;
