@@ -8,3 +8,5 @@ https://nodejs.org/api/fs.html#fscreatewritestreampath-options
 https://github.com/OGD97/QR-Generator?tab=readme-ov-file
 https://github.com/OGD97/QR-Generator?tab=readme-ov-file
 https://github.com/OGD97/QR-Generator/issues
+https://www.npmjs.com/package/inquirer#examples
+https://www.npmjs.com/package/inquirer#examples

@@ -27,9 +27,12 @@ inquirer
     const sliceURL = new URL("../", website);
 
     console.log(answers.url); //TEST
+
+    //URL API
     console.log("This is hostname: " + sliceURL.hostname);
     console.log("This is origin: " + sliceURL.origin);
-    console.log("This is pathname: " + sliceURL.pathname);
+    console.log("This is port: " + sliceURL.port);
+    console.log("This is protocol: " + sliceURL.protocol);
 
     var QRimage = qr.image(website);
 
