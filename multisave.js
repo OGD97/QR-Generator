@@ -34,7 +34,7 @@ inquirer
     console.log("This is port: " + sliceURL.port);
     console.log("This is protocol: " + sliceURL.protocol);
 
-    var QRimage = qr.image(website);
+    var QRimage = qr.image(website, { size: 10 });
 
     QRimage.pipe(fs.createWriteStream(sliceURL.hostname + ".png"), {
       flags: "a", //appending flags
